@@ -1,0 +1,29 @@
+%%%% Methodology: Translating NMVOC emissions speciations into chemical mechanism species
+%%%% Version 0: Jane Coates 2/4/2015
+
+Each solvent speciation in Table XX was compared to the VOC represented in the MCM v3.2.
+The contributions of individual VOC in the solvent speciations that are also represented in the MCM v3.2 determined the emissions of the corresponding MCM v3.2 species.
+For example, the TNO speciation outlines a contribution of 8% to solvent sector emissions from toluene which is represented in the MCM v3.2 by TOLUENE, thus TOLUENE emissions contributed 8% to solvent sector emissions.
+
+Groups of VOC are also listed in solvent speciations as contributing to solvent sector emissions. 
+In these cases, the individual VOC of the specified group relevant to solvent sector emissions were assigned according to the Snap 6 (solvent sector) list of [Passant:2002], which lists the contributions of individual VOC to the different sectors of VOC emissions.
+The contributions of the individual VOC to a specified group of VOC was obtained by scaling the contributions of the individual VOC by the ratios of total emissions of the whole group.
+For example, xylenes contribute 8% to solvent sector emissions in the TNO speciation and 4.8% to Snap 6 emissions in [Passant:2002], where the three xylene isomers (m-, o- and p-xylene) individually contribute 3.2%, 0.8% and 0.8% to Snap 6 emissions in [Passant:2002].
+Thus the contribution of m-xylene using the TNO speciation was determined by scaling the individual contribution of m-xylene (3.2%) by 8/4.8 resulting in a contribution of 5.3% from m-xylene emissions in the TNO speciation.
+
+When a solvent speciation included contributions from groups of VOC that are not included in [Passant:2002], the individual VOC of the group which are represented in the MCM v3.2 were used with an equal contribution of each MCM v3.2 species to solvent sector emissions.
+For example, pentanes contribute 9.4% to solvent sector emissions in the IPCC speciation but are not listed in the Snap 6 emissions of [Passant:2002].
+Thus, the three pentane species represented in MCM v3.2 (NC5H12, IC5H12 and NEOP) each have an equal contribution of 3.4% to the solvent sector emissions when using the IPCC speciation.
+
+The contributions of individual species to Snap 6 emissions included in [Passant:2002] but not represented in the MCM v3.2 are weighted by carbon number and then added to the contributions of the closest MCM v3.2 species.
+This approach ensured that the amount of emitted reactive carbon in each speciation and when using the MCM v3.2 was the same.
+For example, the largest alkane represented in the MCM v3.2 is dodecane, with 12 carbon atoms, while in [Passant:2002] tetradecane, a 14-C alkane, also contributes to Snap 6 emissions.
+The contribution of tetradecane in [Passant:2002] (0.2%) is scaled by 14/12 and then added to the contribution of dodecane in [Passant:2002] (0.1%), thus NC12H24 -- dodecane in MCM v3.2 -- contributes 0.3% to solvent sector emissions.
+
+The total amount of anthropogenic VOC emitted over the idealised urban area of 1000 km^2 was 1000 tons/day [Warnecke:2007], with a contribution of 43% from the solvent sector; thus the total amount of emitted VOC from the solvent sector was 430 tons/day.
+The emissions (in molecules cm^-2 s^-1) of the MCM v3.2 species representing the solvent sector emissions in the specifications were calculated using the percent contributions of the individual MCM v3.2 species to solvent sector emissions.
+These emissions were held constant until noon of the first day in each model run.
+
+The individual MCM v3.2 species and their emissions were then mapped to the appropriate MOZART-4 [Emmons:2010] and RADM2 [Stockwell:1989] species.
+When an aggregated (lumped) mechanism species represented an MCM v3.2 species, the emissions of the MCM v3.2 species were weighted by the carbon numbers of the lumped and MCM v3.2 species.
+For example, dodecane, a 12-carbon alkane, is represented by the 5-carbon species BIGALK in MOZART-4 and by the 7.9-carbon species HC8 in RADM2, thus dodecane emissions were scaled by 12/5 in MOZART-4 and 12/7.9 in RADM2.

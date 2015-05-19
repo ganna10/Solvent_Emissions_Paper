@@ -1,0 +1,135 @@
+\documentclass[14pt]{extarticle}
+
+\usepackage{extsizes}
+\usepackage{booktabs}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{setspace}
+\setstretch{1.5}
+\setlength{\fboxrule}{2pt}
+\usepackage[a4paper, margin=25mm]{geometry}
+
+\begin{document}
+
+\section*{Assignment 4: Extended Outline}
+
+%\vspace{5mm}
+\begin{center}
+    \framebox[\textwidth][s]{\hspace{2mm} Author of Assignment: Jane Coates \hspace{5mm} Date: \today \hspace{2mm} } \par
+\end{center}
+%\vspace{3mm}
+
+\section{Introduction}
+
+\textbf{Currently Accepted General Statement}
+\begin{itemize}
+    \item VOCs have an adverse effect on health, both directly and indirectly as a precursor of secondary air pollutants, such as O3. [Laurent:2014]
+    \item Degradation of VOC in the presence of NOx and sunlights leads to increased levels of tropospheric O3 [Atkinson:2000].
+    \item Chemical transport models are numerical models that used to predict air pollutant concentrations (such as O3 or PM) for different emission scenarios $\Rightarrow$ representing VOC emissions in models is critical.
+    \item Emission Inventories (EIs) split VOC emissions into sectors according to their source (e.g. Industry, Solvent Use). Sectors are further split into VOC groups and/or individual VOC with relative contributions to total sector emissions. 
+\end{itemize}
+
+\textbf{Specific Problem(s)}
+\begin{itemize}
+    \item Uncertainties in EI: are the VOC and their contributions correct? [Borbon:2013]
+    \item EI are static i.e. represent a snapshot in time whereas VOC emissions from a sector are not constant in time. [Boynard:2014]
+\end{itemize}
+
+\textbf{Gap}
+\begin{itemize}
+    \item How large would the difference in modelled O3 be using different EIs as model input? Are models sensitive to a changing VOC input?
+\end{itemize}
+
+\textbf{Study Objective/Scientific Question/Hypothesis}
+\begin{itemize}
+	\item Would changing an EI make a difference to modelled output? Focus on O3 produced from different solvent sector EIs, as solvent sector has largest contribution to total anthropogenic emissions.
+\end{itemize}
+
+\section{Materials and Methods}
+
+\subsection{Solvent Sector NMVOC Speciations}
+\begin{itemize}
+    \item Reference: TNO (European average) compared to model (IPCC, EMEP) and country (DE94, GR95, GR05, UK98, UK08) speciations. Table: Initial Speciation VOC assigned to categories
+	\item Solvent speciations determine the model inputs i.e. which VOC and how much is emitted.
+\end{itemize}
+
+\subsection{Model Description}
+\begin{itemize}
+    \item Boxmodel to focus on impacts of VOC emissions on O3 production chemistry.
+    \item Use MECCA boxmodel similarly set up as described in [Coates:2015].
+	\item MCM v3.2 chemistry: $\sim$120 primary VOC with detailed degradation chemistry.
+	\item Does changing the chemistry scheme reduce or enhance the O3 produced from the EIs? Use regional and global chemistry schemes (RADM2 and MOZART) with same model setup.
+    \item Used MOZART and RADM2 as described in [Coates:2015].
+\end{itemize}
+
+\subsection{Model Set-up and Simulations}
+\begin{itemize}
+    \item Conditions for maximum O3 production for each speciation.
+    \item 7 day run time as not all VOC produce maximum O3 on the first~day.
+    \item Idealised urban area of 1000 km$^2$, total NMVOC emissions of 1000 tons day$^{-1}$.
+\end{itemize}
+
+\subsection{NMVOC Initial Conditions}
+\begin{itemize}
+    \item Solvent sector contributes 43\% to total NMVOC emissions $\Rightarrow$ Total NMVOC emissions in each run = 430 tons day$^{-1}$
+    \item Emitted VOC and amount emitted determined from different speciations, if a VOC group is specified, the individual VOC are determined using [Passant:2002].
+	\item NMVOC emissions held constant until noon of first day.
+    \item Table: MCM initial conditions for each speciation.
+\end{itemize}
+
+\section{Results}
+
+\subsection{Ozone Time series}
+\begin{itemize}
+	\item Figure: [O3] time series. %Table: 2nd day differences in maximum O3.
+	\item Model speciations give highest O3 for all mechanisms. %; reference and country speciations generally less O3.
+	\item MCM: 17 ppbv between highest and lowest time series. Speciation profiles are relatively evenly spread out time series but EMEP higher.
+	\item MOZART: 12 ppbv between highest and lowest time series. Time series have less spread but IPCC much higher on first 2 days.
+	\item RADM2: 17 ppbv between highest and lowest time series. IPCC and EMEP outliers compared to other speciations.
+\end{itemize}
+
+\subsection{Ox Production Budgets}
+\begin{itemize}
+	\item Figure: Ox production budgets allocated to original categories, using tagging technique.
+    \item Same relationships of O3 time series also seen.
+    \item Alkanes and oxygenated VOC dominate Ox production.
+\end{itemize}
+
+\subsection{Alkanes and Ox Production}
+\begin{itemize}
+    \item Figures: Correlations of Alkanes and Oxygenated VOC in EI vs Ox production.
+    \item More alkanes $\Rightarrow$ more Ox, more oxygenated $\Rightarrow$ less Ox.
+\end{itemize}
+
+\section{Discussion}
+
+\subsection{Ozone Time series}
+\begin{itemize}
+    \item In our study, the choice of input VOC speciation and chemical mechanism in the model influences the simulative O3 mixing ratios.
+    \item Li:2014 compared O3 produced from different EIs used for East-Asia, focusing on individual VOC and how the different contributions specified influences the O3 produced from the individual VOC.
+\end{itemize}
+
+\subsection{Ox Production Budgets}
+\begin{itemize}
+    \item Alkanes have a larger potential to produce Ox over multi-day runs than more reactive VOC [Butler:2011, Coates:2015].
+    \item MOZART underestimates Ox from aromatics and alkanes compared to MCM [Coates:2015] $\Rightarrow$ Ox production in MOZART $<$ MCM.
+    \item RADM2 underestimates Ox from aromatics and many alkanes, Ox production from smaller alkanes over estimated compared to MCM [Coates:2015] $\Rightarrow$ speciation determines whether the Ox produced with RADM2 is greater or less than MCM.
+\end{itemize}
+
+\subsection{Alkanes and Ox Production}
+\begin{itemize}
+    \item IPCC and EMEP with highest Ox production specify more alkane than oxygenated species from solvent sector, whereas all other speciations specify the opposite and have lower Ox production.
+    \item Li:2014 analyse Ox production from individual VOC using the MIR scale $\Rightarrow$ underestimation of alkanes compared to reactive VOC. Thus they conclude that alkenes and other more reactive species have the largest impact on O3 production.
+	\item Are alkanes represented correctly (type and contribution)?
+    \item Improved estimates for VOCs and their contributions in EIs.
+    %\item Lumping oxygenated VOC into alkane species i.e. going from detailed to simplified chemistry schemes.
+\end{itemize} 
+
+\section{Conclusions}
+\begin{itemize}
+	\item Our modelling study suggests that the choice of VOC speciation influences O3 mixing ratios.
+    \item Speciations allocating more emissions to alkanes produce more O3 than speciations with more contributions of oxygenated species under the conditions of the model.
+	\item Need for more (spatial and temporal) representative and accurate EIs.
+	\item Going from a boxmodel to a 3-D model may reduce these differences in O3 due to effects of transport and dilution.
+\end{itemize}
+
+\end{document}

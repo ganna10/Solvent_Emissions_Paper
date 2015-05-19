@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+\usepackage{booktabs}
+\usepackage{setspace}
+\setstretch{1.3}
+\setlength{\fboxrule}{2pt}
+\usepackage[a4paper, margin=35mm]{geometry}
+
+\begin{document}
+
+\section*{Assignment 2: Analysis of a refereed paper}
+
+Full paper reference: K. M. Emmerson and M. J. Evans, (2009), Comparison of tropospheric gas-phase chemistry schemes for use within global models, Atmos. Chem. Phys., 9, 1831--1845
+
+\vspace{5mm}
+\begin{center}
+    \framebox[\textwidth][s]{\hspace{2mm} Author of Assignment: Jane Coates \hspace{5mm} Date: 20/4/2015 \hspace{2mm} } \par
+\end{center}
+\vspace{5mm}
+
+Please answer these questions:
+
+\begin{itemize}
+    \item What general and specific scientific problems does this study address? Summarize relevant background information of the study. 
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item This study addresses the effects of different representations of tropospheric gas-phase chemistry in chemistry-climate models on predicted concentrations of atmospheric species. \newline
+            Tropospheric gas-phase chemistry is highly complex with the current knowledge describing thousands of chemical species and tens of thousands of reactions. Computational resources available for global chemistry-climate models impose simplified versions of gas-phase chemistry. Moreover, many approaches to simplifying this chemistry have been used with varying degrees of success.
+        \end{itemize}
+
+    \item What are the study's objective(s)?
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item This study compares a state of the art chemistry scheme to six chemistry schemes used in global chemistry-climate models under varying conditions to identify areas of weakness in the simplified chemistry schemes.
+        \end{itemize}
+
+    \item What methods were used? Why did authors choose these methods?
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item The authors used a boxmodel with each chemistry scheme as the reference scheme is too complex to be used in a global model.
+        \end{itemize}
+
+    \item How was the study set up? Describe experimental design or modelling protocol.
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item Different atmospheric conditions (such as industrial, clean, biogenic) were determined using a global model, the global model outputs were used as initial and boundary conditions in the boxmodel. Another set of simulations were performed using detailed data from a measurement campaign. Each modelling scenario was then run using each chemistry scheme.
+        \end{itemize}
+
+    \item What results were achieved? Refer to Figures and Tables. Did the authors achieved their objective/ confirmed their hypothesis? Why? Why not?
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item In all cases, the largest differences in O3 concentrations to the reference scheme are in industrial and biogenic conditions (Table 4, Figs. 2--5), which are the cases with high VOC emissions and the simplified schemes have to deal with organic chemistry. In particular, biogenic conditions can either increase or decrease O3 depending on the scheme thus biogenic degradation chemistry is the weakest area of tropospheric gas-phase chemistry in simplified schemes.
+        \end{itemize}
+
+    \item What are the conclusions from this study? Are these conclusions appropriate from your point of view?
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item The choices made in simplifying gas-phase chemistry can have very large impacts on O3 and PAN concentrations; biogenic and night-time chemistry are also areas of weakness. Each of these conclusions are appropriate, however I think more outlook on the impact of biogenic chemistry on global chemistry is needed as biogenic VOC emissions have a large contribution globally.
+        \end{itemize}
+
+    \item How important do you think are the findings from this study for the larger scientific field? What relevant questions still have to be answered?
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item I think these findings highlight the importance of the representation of chemistry in global models and that the choice of scheme can influence the simulations. The study highlights that biogenic and night-time chemistry needs to be better represented in global models. One scheme (CRI-reduced) appears to be a way forward but not currently used in global models.
+        \end{itemize}
+
+    \item How do you assess the structure, presentation and logic of the article?
+        \begin{itemize}
+          \renewcommand\labelitemii{$\rightarrow$}
+         \item I think this article is well structured, presents a large amount of data in a succinct manner and is generally well-written and easy to follow.
+        \end{itemize}
+
+\end{itemize}
+
+
+\end{document}

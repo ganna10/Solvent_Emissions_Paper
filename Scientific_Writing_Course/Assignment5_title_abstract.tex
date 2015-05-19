@@ -1,0 +1,62 @@
+\documentclass[14pt]{extarticle}
+
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[round]{natbib}
+\setlength{\bibhang}{0pt}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf, .png, .jpg}
+\usepackage{extsizes}
+\usepackage{amsmath}
+\usepackage[version=3]{mhchem}
+\usepackage{booktabs}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{authblk}
+\usepackage{lineno}
+\linenumbers
+\usepackage{array}
+\usepackage{todonotes}
+\usepackage[a4paper, margin=25mm]{geometry}
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\raggedright\let\newline\\\arraybackslash}m{#1}}
+\usepackage[hidelinks,pdftex,
+           pdfauthor={Jane Coates},
+           pdftitle={}
+           pdfsubject={Solvent Emissions},
+           pdfkeywords={TOPP, solvent emissions, emission inventories, boxmodel, Ox production, atmospheric chemistry},
+           pdfproducer={Latex with hyperref},
+           pdfcreator={pdflatex}]{hyperref}
+
+\sloppy
+
+\title{Sensitivity of Modelled Tropospheric Ozone to VOC Emission Inventories}
+\author[1]{J. Coates}
+\author[1]{E. von Schneidemesser}
+\author[2]{Hugo Denier van der Gon}
+\author[2]{Anton Visschedijk}
+\author[1]{T. Butler}
+\affil[1]{Institute for Advanced Sustainability Studies, Potsdam, Germany}
+\affil[2]{TNO Built Environment and Geosciences, Utrecht, The Netherlands}
+\renewcommand\Authands{ and }
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Volatile organic compounds (VOCs) are detrimental to human health both directly and indirectly, through their role in the formation of secondary air pollutants such as tropospheric ozone (\ce{O3}).
+    The identity and amounts of VOCs emitted into the troposphere are represented in emission inventories (EIs) for input to chemical transport models that predict air pollutant levels.
+    These EIs are outdated but before taking on the task of providing an up-to-date and highly speciated EI, the sensitivity of models to the change in VOC input needs to be addressed.
+    We determine the sensitivity of modelled tropospheric \ce{O3} to VOC emission inventories by comparing the maximum potential difference in \ce{O3} levels using various solvent sector EIs in an idealised study using a boxmodel.
+    We further test this sensitivity using three chemical mechanisms that describe \ce{O3} production chemistry at different scales -- point (MCM~v3.2), regional (RADM2) and global (MOZART-4).
+    Under the conditions of our study, we find a maximum difference of 17~ppbv between different EIs of the solvent sector, reproduced by each chemical mechanism. 
+    The source of the sensitivity of modelled \ce{O3} to EIs is investigated using a ``tagging'' approach to allocate \ce{O_x} production to the specified groups of VOC in the EIs; at the end of the model run, alkanes have the largest contribution (up to $40$\%) to \ce{O_x} production.
+    Moreover, we demonstrate that the \ce{O_x} produced at the end of the model run by solvent sector EIs is directly related to the amount of total alkane emissions specified.
+    %Comparing two time points of solvent sector emissions indicates a trend towards larger emissions from oxygenated VOC, thus EIs that specify larger contributions from alkanes are out of date.
+    These results indicate that modelled tropospheric \ce{O3} is sensitive to the distribution of VOCs specified by emission inventories and that the maximum amount of \ce{O_x} produced from an updated emission inventory depends on the amount of alkane emissions specified.
+\end{abstract}
+
+\end{document}
